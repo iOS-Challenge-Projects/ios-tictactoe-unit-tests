@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0436A3A7243753DA00A8461B /* GameAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436A3A6243753DA00A8461B /* GameAITests.swift */; };
 		04679FBB2437245800EFAD02 /* GameBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04679FBA2437245800EFAD02 /* GameBoardTests.swift */; };
 		9DA41C3C2148ABB5001A3F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA41C3B2148ABB5001A3F45 /* AppDelegate.swift */; };
 		9DA41C412148ABB5001A3F45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA41C3F2148ABB5001A3F45 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0436A3A6243753DA00A8461B /* GameAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAITests.swift; sourceTree = "<group>"; };
 		04679FB0243721E500EFAD02 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04679FB4243721E500EFAD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04679FBA2437245800EFAD02 /* GameBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardTests.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				04679FBA2437245800EFAD02 /* GameBoardTests.swift */,
+				0436A3A6243753DA00A8461B /* GameAITests.swift */,
 				04679FB4243721E500EFAD02 /* Info.plist */,
 			);
 			path = TicTacToeTests;
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04679FBB2437245800EFAD02 /* GameBoardTests.swift in Sources */,
+				0436A3A7243753DA00A8461B /* GameAITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
