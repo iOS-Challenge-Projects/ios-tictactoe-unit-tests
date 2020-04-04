@@ -18,6 +18,9 @@ class TicTacToeUITests: XCTestCase {
         return app.staticTexts["GameViewController.Label"]
     }
     
+    private var restartButton: XCUIElement {
+        return app.staticTexts["Restart"]
+    }
     
     override func setUp() {
         //Stop if a test fails
@@ -36,8 +39,6 @@ class TicTacToeUITests: XCTestCase {
         let button4 = button(for: 4)
         let button5 = button(for: 5)
         let button6 = button(for: 6)
-//        let button7 = button(for: 7)
-//        let button8 = button(for: 8)
         
         button0.tap()
         XCTAssertEqual(button0.label, "X")
@@ -67,6 +68,27 @@ class TicTacToeUITests: XCTestCase {
         button6.tap()
         XCTAssertEqual(button6.label, "X")
         XCTAssertEqual(turnLabel.label, "Player X won!")
+    }
+    
+    
+    func testRestartingGame() {
+        
+        let button4 = button(for: 4)
+        button4.tap()
+        
+        //Check if the mark was placed
+        XCTAssertEqual(button4.label, "X")
+        
+        //Check if the mark was placed
+        XCTAssertEqual(turnLabel.label, "Player O's turn")
+        
+        //Reset the game
+        restartButton.tap()
+        
+        //Make sure the board is clear
+        for i in 0...8{
+            XCTAssertEqual(button(for: i).label, " ")
+        }
     }
     
     
