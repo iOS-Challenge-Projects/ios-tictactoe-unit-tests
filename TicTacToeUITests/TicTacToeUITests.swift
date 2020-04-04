@@ -91,6 +91,30 @@ class TicTacToeUITests: XCTestCase {
         }
     }
     
+    //Example of expectations
+    func testExample() {
+        
+        //Example one using a predicate (this is a basic ex)
+        let predicate = NSPredicate(format: "exists == true")
+
+        expectation(for: predicate, evaluatedWith: button(for: 0), handler: nil)
+        
+        //Give the amount of time to wait till it runs the check
+        waitForExpectations(timeout: 3, handler: nil)
+        
+        
+        //Example two
+        let dataFetchExpectation = expectation(description: "Fetched data from API")
+        
+        DispatchQueue.global().async {
+            if self.button(for: 0).exists{
+                dataFetchExpectation.fulfill()
+            }
+        }
+        wait(for: [dataFetchExpectation], timeout: 2)
+        
+    }
+    
     
     //Helper method to create the button extension
     private func button(for Index: Int) -> XCUIElement {
